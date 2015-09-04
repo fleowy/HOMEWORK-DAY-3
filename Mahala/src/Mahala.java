@@ -4,48 +4,48 @@ public class Mahala {
 
 	public static void main(String[] args) {
 		int occupants;
-		Scanner sc=new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 		System.out.print("number of occupants: ");
-		occupants=sc.nextInt();
+		occupants=scanner.nextInt();
 		
 		int age;
-		Human[] ppl;
-		ppl=new Human[10];
+		Human[] person;
+		person=new Human[10];
 		int averageAge=0;
 		for(int i=0;i<occupants;i++)
 		{
-			System.out.print("enter age: ");
-			age=sc.nextInt();
+			System.out.print("Enter age: ");
+			age=scanner.nextInt();
 			System.out.println();
 			if(age<6) 
 			{
-				ppl[i]=new Baby();
-				ppl[i].setAge(age);
-				ppl[i].setLanguageSpoken();
-				System.out.print("enter name: ");
-				ppl[i].setName();
+				person[i]=new Baby();
+				person[i].setAge(age);
+				person[i].setLanguageSpoken();
+				System.out.print("Enter name: ");
+				person[i].setName();
 				System.out.println();
 			}
 			else if(age>59) {
-				ppl[i]=new Old();
-				ppl[i].setAge(age);
-				System.out.print("enter language: ");
-				ppl[i].setLanguageSpoken();
+				person[i]=new Old();
+				person[i].setAge(age);
+				System.out.print("Enter language: ");
+				person[i].setLanguageSpoken();
 				System.out.println();
-				System.out.print("enter name: ");
-				ppl[i].setName();
+				System.out.print("Enter name: ");
+				person[i].setName();
 				System.out.println();
 
 			}
 			else 
 			{
-				ppl[i]=new Teen();
-				ppl[i].setAge(age);
-				System.out.print("enter language: ");
-				ppl[i].setLanguageSpoken();
+				person[i]=new Teen();
+				person[i].setAge(age);
+				System.out.print("Enter language: ");
+				person[i].setLanguageSpoken();
 				System.out.println();
 				System.out.print("enter name: ");
-				ppl[i].setName();
+				person[i].setName();
 				System.out.println();
 			}
 			
